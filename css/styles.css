@@ -1,0 +1,8 @@
+a {
+  text-decoration: none;
+}
+
+nav li {
+  display: inline-flex;
+  padding: 20px;
+}
