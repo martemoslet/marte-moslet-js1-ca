@@ -1,4 +1,4 @@
-const url = "https://wizard-world-api.herokuapp.com/Houses"
+const url = "https://wizard-world-api.herokuapp.com/houses/";
 
 const resultsContainer = document.querySelector(".results");
 
@@ -8,21 +8,9 @@ async function getHouses() {
 
         const results = await response.json();
 
-        const getHouses = results;
-
-        
-
-        resultsContainer.innerHTML = "";
-
-        for(let i = 0; i < getHouses.length; i++) {
-            console.log(getHouses[i].name);
-
-            if(i===3) {
-                break;
-            }
-            resultsContainer.innerHTML += `<div class="result"><a href="details.html?id=${getHouses.id}">${getHouses[i].name}</a></div>`;
-        }
-
+        results.forEach(element => {
+            resultsContainer.innerHTML += `<div class="result"><a href="details.html?id=${element.id}">${element.name}</a></div>`;
+                });
     }
     
    catch(error) {
@@ -31,4 +19,5 @@ async function getHouses() {
     }   
 }
 
+resultsContainer.innerHTML = "";
 getHouses();

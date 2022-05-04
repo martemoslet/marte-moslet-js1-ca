@@ -5,6 +5,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 // get the id parameter from the query string
-const getId = params.get("id");
 
-console.log("The id is " + getId)
+const id = params.get("id");
+
+console.log("The id is " + id);
