@@ -7,7 +7,6 @@ nav li {
   padding: 20px;
   font-size: 1.2em;
   font-weight: bold;
-  color: #000;
 }
 
 body {
@@ -28,8 +27,8 @@ body {
 }
 
 .loader {
-  border: 15px solid #ff81d0;
-  border-top: 15px solid #400036;
+  border: 15px solid #0f47ff;
+  border-top: 15px solid #b91313;
   border-radius: 50%;
   width: 50px;
   height: 50px;
