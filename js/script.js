@@ -1,28 +1,28 @@
-const url = "https://www.anapioficeandfire.com/api/houses"
+const url = "https://wizard-world-api.herokuapp.com/Houses"
 
 const resultsContainer = document.querySelector(".results");
 
-async function getInfo() {
+async function getHouses() {
     try {
         const response = await fetch(url);
 
         const results = await response.json();
 
-        const houses = results;
+        const getHouses = results;
 
         
 
         resultsContainer.innerHTML = "";
 
-        for(let i = 0; i < houses.length; i ++) {
-            console.log(houses[i].name);
+        for(let i = 0; i < getHouses.length; i++) {
+            console.log(getHouses[i].name);
 
             if(i===3) {
                 break;
             }
-
-            resultsContainer.innerHTML += `<div class="result"><a href="details.html">${houses[i].name}</a></div>`;
+            resultsContainer.innerHTML += `<div class="result"><a href="details.html?id=${getHouses.id}">${getHouses[i].name}</a></div>`;
         }
+
     }
     
    catch(error) {
@@ -31,4 +31,4 @@ async function getInfo() {
     }   
 }
 
-getInfo();
+getHouses();
