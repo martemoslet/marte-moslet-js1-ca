@@ -13,12 +13,17 @@ async function getData(houseId) {
     try {
         const response = await fetch("https://wizard-world-api.herokuapp.com/Houses/" + houseId);
         const results = await response.json();
+        details.innerHTML = "";
         console.log(results);
 
         details.innerHTML = `<h1>${results.name}</h1>
+                            <ul>
                             <li>House colors: ${results.houseColours}</li>
                             <li>Founder: ${results.founder}</li>
-                            <li>Animal: ${results.animal}</li>`
+                            <li>Animal: ${results.animal}</li>
+                            <li>Ghost: ${results.ghost}</li>
+                            <li>Common room: ${results.commonRoom}</li>
+                            </ul>`
     }
     
    catch(error) {

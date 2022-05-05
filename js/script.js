@@ -8,6 +8,8 @@ async function getHouses() {
 
         const results = await response.json();
 
+        resultsContainer.innerHTML = "";
+
         results.forEach(element => {
             resultsContainer.innerHTML += `<div class="result"><a href="details.html?id=${element.id}">${element.name}</a></div>`;
                 });
@@ -19,5 +21,4 @@ async function getHouses() {
     }   
 }
 
-resultsContainer.innerHTML = "";
 getHouses();
