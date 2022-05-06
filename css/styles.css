@@ -77,3 +77,36 @@ ul {
   align-content: center;
   width: 100%;
 }
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  font-size: 14px;
+  margin-top: 3px;
+  padding: 6px;
+}
+
+.form-error {
+  display: none;
+  color: rgb(255, 0, 85);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+button {
+  background-color: rgb(141, 47, 255);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  width: 190px;
+  padding: 12px;
+  border-radius: 1rem;
+}
