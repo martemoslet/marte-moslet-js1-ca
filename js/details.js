@@ -2,10 +2,8 @@ const details = document.querySelector(".details");
 const queryString = document.location.search;
 const title = document.querySelector(".title")
 
-// create an object that will allows us to access all the query string parameters
 const params = new URLSearchParams(queryString);
 
-// get the id parameter from the query string
 const id = params.get("id");
 
 async function getData(houseId) {

@@ -101,7 +101,8 @@ input {
   margin-top: 2px;
 }
 
-button {
+button,
+.message {
   background-color: rgb(141, 47, 255);
   color: white;
   margin-top: 10px;
@@ -109,4 +110,13 @@ button {
   width: 190px;
   padding: 12px;
   border-radius: 1rem;
+}
+
+button {
+  width: 190px;
+}
+
+.message {
+  width: 250px;
+  text-align: center;
 }

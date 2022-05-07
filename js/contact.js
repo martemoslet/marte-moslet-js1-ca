@@ -7,8 +7,18 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const address = document.querySelector("#address");
 const addressError = document.querySelector("#addressError");
+const message = document.querySelector("#message")
 
-function validateForm () {
+
+function submitForm(event) {
+    event.preventDefault();
+    message.innerHTML = `<div class="message">Thank you for your feedback!</div>`;
+    form.reset();
+}
+
+form.addEventListener("submit", submitForm);
+
+function validateForm (event) {
     event.preventDefault();
 
     if (checkLength(firstName.value, 0) === true) {
