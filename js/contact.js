@@ -9,15 +9,6 @@ const address = document.querySelector("#address");
 const addressError = document.querySelector("#addressError");
 const message = document.querySelector("#message")
 
-
-function submitForm(event) {
-    event.preventDefault();
-    message.innerHTML = `<div class="message">Thank you for your feedback!</div>`;
-    form.reset();
-}
-
-form.addEventListener("submit", submitForm);
-
 function validateForm (event) {
     event.preventDefault();
 
